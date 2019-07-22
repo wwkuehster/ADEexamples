@@ -1,0 +1,62 @@
+//* This file is part of the MOOSE framework
+//* https://www.mooseframework.org
+//*
+//* All rights reserved, see COPYRIGHT for full restrictions
+//* https://github.com/idaholab/moose/blob/master/COPYRIGHT
+//*
+//* Licensed under LGPL 2.1, please see LICENSE for details
+//* https://www.gnu.org/licenses/lgpl-2.1.html
+#include "wyattexamplesTestApp.h"
+#include "wyattexamplesApp.h"
+#include "Moose.h"
+#include "AppFactory.h"
+#include "MooseSyntax.h"
+
+template <>
+InputParameters
+validParams<wyattexamplesTestApp>()
+{
+  InputParameters params = validParams<wyattexamplesApp>();
+  return params;
+}
+
+wyattexamplesTestApp::wyattexamplesTestApp(InputParameters parameters) : MooseApp(parameters)
+{
+  wyattexamplesTestApp::registerAll(
+      _factory, _action_factory, _syntax, getParam<bool>("allow_test_objects"));
+}
+
+wyattexamplesTestApp::~wyattexamplesTestApp() {}
+
+void
+wyattexamplesTestApp::registerAll(Factory & f, ActionFactory & af, Syntax & s, bool use_test_objs)
+{
+  wyattexamplesApp::registerAll(f, af, s);
+  if (use_test_objs)
+  {
+    Registry::registerObjectsTo(f, {"wyattexamplesTestApp"});
+    Registry::registerActionsTo(af, {"wyattexamplesTestApp"});
+  }
+}
+
+void
+wyattexamplesTestApp::registerApps()
+{
+  registerApp(wyattexamplesApp);
+  registerApp(wyattexamplesTestApp);
+}
+
+/***************************************************************************************************
+ *********************** Dynamic Library Entry Points - DO NOT MODIFY ******************************
+ **************************************************************************************************/
+// External entry point for dynamic application loading
+extern "C" void
+wyattexamplesTestApp__registerAll(Factory & f, ActionFactory & af, Syntax & s)
+{
+  wyattexamplesTestApp::registerAll(f, af, s);
+}
+extern "C" void
+wyattexamplesTestApp__registerApps()
+{
+  wyattexamplesTestApp::registerApps();
+}
