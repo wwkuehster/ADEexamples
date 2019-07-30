@@ -3,10 +3,7 @@ import numpy as np
 import os
 from subprocess import call
 
-#insert your bashProfile (or other directory) into the os.chdir inputs
-#you have to write it all out the "~" shortcut doesn't work
 
-os.chdir("/home/john/projects/moose/examples/ex05_amr/Helpers") #change directory to the one containing the C files
 call(["gcc","CopyBlock.C","-o","CopyBlock"])
 call(["./CopyBlock","161.inp","Surface1.txt","Surface1"])
 call(["./CopyBlock","161.inp","Surface2.txt","Surface2"]) #runs the CopyBlock.C
@@ -27,10 +24,8 @@ call(["cp","-r","Surface1Props.txt","/home/john/projects/moose/examples/ex01_inp
 call(["cp","-r","Surface2Props.txt","/home/john/projects/moose/examples/ex01_inputfile"])
 call(["cp","-r","trialmesh.inp","/home/john/projects/moose/examples/ex01_inputfile"])
 
-os.chdir("/home/john/projects/moose/examples/ex01_inputfile") #changes directory to the one with the input file
-
 #reads the two surface txt files which contain the element ids, coefficient of diffusion, and x-velocity
-numofRowscsv = pd.read_csv('Surface1Props.txt',sep=" ",header=None) 
+numofRowscsv = pd.read_csv('Surface1Props.txt',sep=" ",header=None)
 numofRowscsv2 = pd.read_csv('Surface2Props.txt',sep=" ",header=None)
 #reads the first column of the files to determine how many element blocks there are.
 numofElemSet = numofRowscsv[0][:]
@@ -107,7 +102,7 @@ with open('TEST.i','w') as f:       #open and write the input file
         f.write('    block = '+ (str(numofRowscsv[0][i]) + '_TRI3' + ' \n'))
         f.write('    coefficient = 1.0' + ' \n')
         f.write('  [../] \n')
-    f.write('[]\n')   
+    f.write('[]\n')
     f.write('[BCs]\n')
     f.write('  [./bottom]\n')
     f.write('    type = DirichletBC\n')
@@ -132,7 +127,7 @@ with open('TEST.i','w') as f:       #open and write the input file
     f.write('  exodus = true\n')
     f.write('[]\n')
 
-#script for executing commands in the terminal               
+#script for executing commands in the terminal
 call(["make","-j8"])
 call(["./ex01-opt","-i","TEST.i"])      #executing moose
 os.system("ncdump TEST_out.e > TEST_out.txt")   #converting exodus to text file
