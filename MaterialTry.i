@@ -14,12 +14,6 @@
 []
 
 [Kernels]
-  [./convection]
-    type = Convection
-    variable = convected
-    velocity = '1 0 0'
-  [../]
-  
   [./diffusion]
     type = ExampleDiffusion
     variable = convected
@@ -45,26 +39,26 @@
     type = DirichletBC
     variable = convected
     boundary = 'LeftSide'
-    value = 0
+    value = 1
   [../]
   [./right]
     type = DirichletBC
     variable = convected
     boundary = 'RightSide'
-    value = 1
+    value = 0
   [../]
   
   [./left_diff]
     type = DirichletBC
     variable = diffused
     boundary = 'LeftSide'
-    value = 0
+    value = 1
   [../]
   [./right_diff]
     type = DirichletBC
     variable = diffused
     boundary = 'RightSide'
-    value = 1
+    value = 0
   [../]
 []
 
@@ -73,11 +67,11 @@
     type = GenericConstantMaterial
     block = 'Surface1_TRI3'
     prop_names = 'diffusivity'
-    prop_values = '.01'
+    prop_values = '.1'
   [../]
   [./vug]
     type = GenericConstantMaterial 
-    block = 'Surfaces_TRI3'
+    block = 'Surface2_TRI3'
     prop_names = 'diffusivity'
     prop_values	= '.9'
   [../]
