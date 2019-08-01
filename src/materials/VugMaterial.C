@@ -7,13 +7,13 @@
 // Licensed under LGPL 2.1, please see LICENSE for details
 // https://www.gnu.org/licenses/lgpl-2.1.html
 
-#include "ExampleMaterial.h"
+#include "VugMaterial.h"
 
-registerMooseObject("wyattexamplesApp", ExampleMaterial);
+registerMooseObject("wyattexamplesApp", VugMaterial);
 
 template <>
 InputParameters
-validParams<ExampleMaterial>()
+validParams<VugMaterial>()
 {
   InputParameters params = validParams<Material>();
 
@@ -34,7 +34,7 @@ validParams<ExampleMaterial>()
   return params;
 }
 
-ExampleMaterial::ExampleMaterial(const InputParameters & parameters)
+VugMaterial::VugMaterial(const InputParameters & parameters)
   : Material(parameters),
     // Declare that this material is going to provide a Real value typed
     // material property named "diffusivity" that Kernels and other objects can use.
@@ -55,11 +55,11 @@ ExampleMaterial::ExampleMaterial(const InputParameters & parameters)
 }
 
 void
-ExampleMaterial::computeQpProperties()
+VugMaterial::computeQpProperties()
 {
   // Diffusivity will be the value of the (linearly-interpolated) piece-wise function described by
   // the user.
-  _diffusivity[_qp] = _piecewise_func.sample(_q_point[_qp](2));
+  _diffusivity[_qp] = matlabcode(wytt1d.mat,_q_point[_qp](0),q_point[_qp](1));
 
   // Convection velocity is set equal to the gradient of the variable set by the user.
   _convection_velocity[_qp] = _diffusion_gradient[_qp];
