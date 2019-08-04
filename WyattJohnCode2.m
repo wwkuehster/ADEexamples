@@ -10,7 +10,7 @@
 %--------------------------------------------------------------------------
 
 %function [upoint,vpoint]=WyattJohnCode2(casefilename, xpoint,ypoint, domain)
-function [upoint,vpoint]=WyattJohnCode2()
+function WyattJohnCode2();
 %clc, clear all, close all;
 global Gn c mu rho Pinf s0 vars solution N aa bb k lambda ;
 k  = sym('k','real');
@@ -18,10 +18,10 @@ k=0.0001;
 lambda=5;
 
 % you send domain as an input argument
-domain='b';% 's'for stokes(vug), 'd' for darcy(porous), 'b' for both
+domain='d';% 's'for stokes(vug), 'd' for darcy(porous), 'b' for both
 
 %case 1
-casefilename='wytt1.mat';
+casefilename='wytt1d.mat';
 xc=[0];% x coordinate of center of the ellipse
 zc=[0];% y coordinate of center of the ellipse
 ac=[2]/4;% semi-major axis same as our ellipse in 161.inp
@@ -39,8 +39,8 @@ for i=1:numel(xc)
     aa=ac(i);
     bb=bc(i);
     [X0,Z0,X,Z,Xd,Xs,Zd,Zs,pd,ps,ud,us,vd,vs,psis,psid,Keff]=AnalyticSolution();
-    save (casefilename, 'X0','Z0','X','Z','pd','ps','ud','us','vd','vs','psis','psid');
-    load (casefilename, 'X0','Z0','X','Z','pd','ps','ud','us','vd','vs','psis','psid');
+%    save (casefilename, 'X0','Z0','X','Z','pd','ps','ud','us','vd','vs','psis','psid');
+ %   load (casefilename, 'X0','Z0','X','Z','pd','ps','ud','us','vd','vs','psis','psid');
       L=max(ac);
     cL=4;
     [xo,zo]=meshgrid(linspace(0,cL*L,np),linspace(-cL*L,cL*L,np));
@@ -95,10 +95,13 @@ for i=1:numel(xc)
     Xuso =Xuso+ Fuso(xo,zo);
     Xvso =Xvso+ Fvso(xo,zo);
 %     %for check 
-%     xpoint=X0; ypoint=Z0;
+    xpoint=X0; ypoint=Z0;
     
-    upoint=Fuso(xo,zo);
-    vpoint=Fvso(xo,zo);
+    save (casefilename, 'Fuso','Fvso');
+    %load (casefilename, 'X0','Z0','X','Z','pd','ps','ud','us','vd','vs','psis','psid');
+   
+    %upoint=Fuso(xpoint,ypoint);
+    %vpoint=Fvso(xpoint,ypoint);
     
     
     XX0(i,:)=X0+xc(i);
@@ -110,7 +113,7 @@ end
 nn=1;
 MM=[min(min(Xpsio)),Xpsio(end/2,(find(isnan(Xpsio(1,1:nn:end/2))==0)-1)*nn+1)];
 
-figure;hold on; contourf(xo,zo,(Xpsio),40);
+%figure;hold on; contourf(xo,zo,(Xpsio),40);
 % figure;hold on; contourf(xo,zo,(Xuso),40);
 % figure;hold on; contourf(xo,zo,(Xvso),40);
 % figure;hold on; contourf(xo,yo,(Xpso),90);
