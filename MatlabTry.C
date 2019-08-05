@@ -19,6 +19,9 @@ int main(){
 
 return 0;}
 
+/* Just an attempt to write C file from C, here we could do
+the material kernel and add the info from matlab*/
+
 int Cfile() {
 	FILE * fp;
 	int i;
