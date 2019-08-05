@@ -1,20 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 
 int Cfile();
+int delimiter();
+int yv[10];
+int xv[10];
+char str1[20],str2[20];
+
 
 int main(){
 	system("matlab -nodisplay -nodesktop -r 'run computationtest(0,7)'");
 	FILE* fp = fopen("MatlabOutput.txt","r");
 	sleep(3);
 	double u,v;
-	char str1[20],str2[20];
 	fscanf(fp,"%s %s",str1,str2);
 	printf("%f\n%f\n",atof(str1),atof(str2));
 	fclose(fp);
 
 	Cfile();
+	delimiter();
+
+	int i;
+	for (i = 0;i < 10;i++) {
+		printf("%d %d\n",yv[i],xv[i]);
+	}
 
 
 return 0;}
@@ -84,4 +95,28 @@ int Cfile() {
 
 
 	return 0;
+}
+
+/* this would reads matlaboutput.txt and place the values
+for the velocities into the arrays xv and yv */
+
+int delimiter () {
+	FILE * yvxv;
+	yvxv = fopen("/home/john/projects/wyattexamples/MatlabOutput.txt","r+");
+	int i = 0;
+	while (fscanf(yvxv, "%d %d",&yv[i],&xv[i])) {
+		i++;
+		if (i == 10) {
+			break;
+		}
+	}
+
+	return 0;
+}
+
+/* this would be how we could write the velocities into
+directly into the C kernel for materials */
+
+int kernloop() {
+
 }
