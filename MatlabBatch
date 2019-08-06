@@ -1,0 +1,11 @@
+#!/bin/bash
+##SBATCH -n 12
+##SBATCH -p main
+##SBATCH --qos main
+#SBATCH -e errors.txt
+#SBATCH -o output.txt
+##SBATCH -mem-per-cpu 4G
+
+cd ~/projects/wyattexamples/
+make -j 8
+./wyattexamples-opt -i WithAuxKernel.i

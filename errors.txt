@@ -1,0 +1,82 @@
+pure virtual method called
+terminate called without an active exception
+
+--------------------------------------------------------------------------------
+               abort() detected at Mon Aug 05 10:05:28 2019 -0500
+--------------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding           : Disabled - No sandbox or build area path
+  Crash Mode               : continue (default)
+  Default Encoding         : UTF-8
+  GNU C Library            : 2.17 stable
+  MATLAB Architecture      : glnxa64
+  MATLAB Root              : /share/apps/matlab/R2019a
+  MATLAB Version           : 9.6.0.1072779 (R2019a)
+  Operating System         : "CentOS Linux release 7.4.1708 (Core) "
+  Process ID               : 31215
+  Processor ID             : x86 Family 6 Model 44 Stepping 2, GenuineIntel
+  Session Key              : 05cab2db-283a-4dc8-8594-793baa38a265
+  Static TLS mitigation    : Disabled: Unable to open display
+  Window System            : No active display
+
+Fault Count: 1
+
+
+Abnormal termination:
+abort()
+
+Register State (from fault):
+  RAX = 0000000000000000  RBX = 00002b56533570a0
+  RCX = ffffffffffffffff  RDX = 0000000000000006
+  RSP = 00002b5653356488  RBP = 00002b5653356ed0
+  RSI = 0000000000007a44  RDI = 00000000000079ef
+
+   R8 = 00002b56357089f0   R9 = 00002b5652cd6c28
+  R10 = 0000000000000008  R11 = 0000000000000202
+  R12 = 0000000000000000  R13 = 000000000000000b
+  R14 = 00002b56533570a0  R15 = 00002b56533571e0
+
+  RIP = 00002b563537f1f7  EFL = 0000000000000202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002b563537f1f7                                   /lib64/libc.so.6+00217591 gsignal+00000055
+[  1] 0x00002b56353808e8                                   /lib64/libc.so.6+00223464 abort+00000328
+[  2] 0x00002b5652c55c64 /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+11525220
+[  3] 0x00002b5652c50ad6 /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+11504342
+[  4] 0x00002b5652c50b03 /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+11504387
+[  5] 0x00002b5652c50ebf /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+11505343
+[  6] 0x00002b5652a92c3e /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+09677886
+[  7] 0x00002b5652c28960 /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+11340128
+[  8] 0x00002b5652c2a01c /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+11345948
+[  9] 0x00002b5652a8c70f /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+09651983 JVM_handle_linux_signal+00000335
+[ 10] 0x00002b5652a82653 /share/apps/matlab/R2019a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+09610835
+[ 11] 0x00002b5634ba55e0                             /lib64/libpthread.so.0+00062944
+[ 12] 0x00002b563d4e5330 /share/apps/matlab/R2019a/bin/glnxa64/libmwstoragefilefolderobserver.so+00394032
+[ 13] 0x00002b563d4e30bc /share/apps/matlab/R2019a/bin/glnxa64/libmwstoragefilefolderobserver.so+00385212 _ZN7storage18filefolderobserver25FileFolderObserverFactory15addFrozenFolderERKN10foundation7storage3vfs6FolderE+00000108
+[ 14] 0x00002b5648d2d5b9 /share/apps/matlab/R2019a/bin/glnxa64/libmwsearch_path_impl.so+00521657
+[ 15] 0x00002b5648d2dfd9 /share/apps/matlab/R2019a/bin/glnxa64/libmwsearch_path_impl.so+00524249
+[ 16] 0x00002b5648d2d55f /share/apps/matlab/R2019a/bin/glnxa64/libmwsearch_path_impl.so+00521567
+[ 17] 0x00002b5648d2dfd9 /share/apps/matlab/R2019a/bin/glnxa64/libmwsearch_path_impl.so+00524249
+[ 18] 0x00002b5648d2d55f /share/apps/matlab/R2019a/bin/glnxa64/libmwsearch_path_impl.so+00521567
+[ 19] 0x00002b5648d2f610 /share/apps/matlab/R2019a/bin/glnxa64/libmwsearch_path_impl.so+00529936
+[ 20] 0x00002b5638926357  /share/apps/matlab/R2019a/bin/glnxa64/libtbb.so.2+00168791
+[ 21] 0x00002b5648d2fcb0 /share/apps/matlab/R2019a/bin/glnxa64/libmwsearch_path_impl.so+00531632
+[ 22] 0x00002b5647c4af5d  /share/apps/matlab/R2019a/bin/glnxa64/libmwmcr.so+00872285
+[ 23] 0x00002b5647c4b0be  /share/apps/matlab/R2019a/bin/glnxa64/libmwmcr.so+00872638
+[ 24] 0x00002b5637be13ff /share/apps/matlab/R2019a/bin/glnxa64/libmwmlutil.so+07521279 _ZNSt13__future_base13_State_baseV29_M_do_setEPSt8functionIFSt10unique_ptrINS_12_Result_baseENS3_8_DeleterEEvEEPb+00000031
+[ 25] 0x00002b5634ba2e20                             /lib64/libpthread.so.0+00052768 pthread_once+00000080
+[ 26] 0x00002b5647c4bbae  /share/apps/matlab/R2019a/bin/glnxa64/libmwmcr.so+00875438
+[ 27] 0x00002b5634e6ae5f /share/apps/matlab/R2019a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00757343
+[ 28] 0x00002b5634b9de25                             /lib64/libpthread.so.0+00032293
+[ 29] 0x00002b563544234d                                   /lib64/libc.so.6+01016653 clone+00000109
+[ 30] 0x0000000000000000                                   <unknown-module>+00000000
+
+** This crash report has been saved to disk as /home/wwkuehster/matlab_crash_dump.31215-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/var/spool/slurmd/job263507/slurm_script: line 11: 31171 Segmentation fault      ./wyattexamples-opt -i WithAuxKernel.i

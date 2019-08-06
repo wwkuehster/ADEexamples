@@ -11,6 +11,19 @@
 
 registerMooseObject("wyattexamplesApp", VugMaterial);
 
+double * calculateVelocity(double xpoint,double ypoint){
+        char command[128];
+        snprintf(command,sizeof(command),"matlab -r 'WyattJohnCodeIteration(%lf,%lf);'",xpoint,ypoint);
+        system(command);
+        FILE* fp=fopen("MatlabOutput.txt","r");
+        char u[20],v[20];
+        fscanf(fp,"%s %s",u,v);
+        static double point[2];
+        point[0]=atof(u);
+        point[1]=atof(v);
+return point;
+}
+
 template <>
 InputParameters
 validParams<VugMaterial>()
@@ -19,11 +32,11 @@ validParams<VugMaterial>()
 
   // Allow users to specify vectors defining the points of a piecewise function formed via linear
   // interpolation.
-  params.addRequiredParam<std::vector<Real>>(
-      "independent_vals",
-      "The vector of z-coordinate values for a piecewise function's independent variable");
-  params.addRequiredParam<std::vector<Real>>(
-      "dependent_vals", "The vector of diffusivity values for a piecewise function's dependent");
+// //  params.addRequiredParam<std::vector<Real>>(
+// //      "independent_vals",
+// //      "The vector of z-coordinate values for a piecewise function's independent variable");
+// //  params.addRequiredParam<std::vector<Real>>(
+// //      "dependent_vals", "The vector of diffusivity values for a piecewise function's dependent");
 
   // Allow the user to specify which independent variable's gradient to use for calculating the
   // convection velocity property:
@@ -46,21 +59,21 @@ VugMaterial::VugMaterial(const InputParameters & parameters)
 
     // Get the reference to the variable coupled into this Material.
     _diffusion_gradient(isCoupled("diffusion_gradient") ? coupledGradient("diffusion_gradient")
-                                                        : _grad_zero),
+                                                        : _grad_zero)
 
-    // Initialize our piecewise function helper with the user-specified interpolation points.
-    _piecewise_func(getParam<std::vector<Real>>("independent_vals"),
-                    getParam<std::vector<Real>>("dependent_vals"))
+//    // Initialize our piecewise function helper with the user-specified interpolation points.
+//    _piecewise_func(getParam<std::vector<Real>>("independent_vals"),
+//                    getParam<std::vector<Real>>("dependent_vals"))
 {
 }
 
-void
-VugMaterial::computeQpProperties()
+void VugMaterial::computeQpProperties()
 {
   // Diffusivity will be the value of the (linearly-interpolated) piece-wise function described by
   // the user.
-  _diffusivity[_qp] = matlabcode(wytt1d.mat,_q_point[_qp](0),q_point[_qp](1));
+  _diffusivity[_qp] = calculateVelocity(_q_point[_qp](0),_q_point[_qp](1))[0];
 
   // Convection velocity is set equal to the gradient of the variable set by the user.
   _convection_velocity[_qp] = _diffusion_gradient[_qp];
 }
+

@@ -1,0 +1,482 @@
+
+
+Framework Information:
+MOOSE Version:           git commit be4525b on 2019-06-25
+LibMesh Version:         82a1cfa7e84f28c361a0ee7b59dcc99c67e11425
+PETSc Version:           3.11.2
+Current Time:            Sun Aug  4 02:11:37 2019
+Executable Timestamp:    Sun Aug  4 02:11:05 2019
+
+Parallelism:
+  Num Processors:          1
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   
+    Total:                 156
+    Local:                 156
+  Elems:                   
+    Total:                 270
+    Local:                 270
+  Num Subdomains:          2
+  Num Partitions:          1
+
+Nonlinear System:
+  Num DOFs:                156
+  Num Local DOFs:          156
+  Variables:               "diffused" 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             ConstantDT
+  Solver Mode:             Preconditioned JFNK
+
+
+Time Step 0, time = 0
+
+Time Step 1, time = 0.01, dt = 0.01
+Computing initial residual...MATLAB is selecting SOFTWARE OPENGL rendering.
+....Opening log file:  /home/wwkuehster/java.log.1210
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.1305
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.1397
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.1488
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.1579
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.1674
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.1810
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.1900
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.1991
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.2081
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2173
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2268
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2358
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2450
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2540
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2636
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2739
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2838
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.2929
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3022
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3125
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3217
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3354
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3446
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3536
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3628
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3719
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3810
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3901
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.3991
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.4082
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.4172
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.4262
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.4352
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.4442
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.4532
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.4623
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.4715
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.4852
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.4942
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5033
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5124
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5214
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.5304
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5407
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5498
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5589
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5680
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.5771
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5862
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.5952
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6042
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6133
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6226
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6362
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6453
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6543
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6634
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6724
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.6815
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6906
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.6997
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7088
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7178
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7269
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7359
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7449
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7541
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7631
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7721
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7857
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.7948
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8038
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8165
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8258
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8349
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8440
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.8530
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8621
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8713
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8804
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8896
+MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.8986
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.9077
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.9167
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+..Opening log file:  /home/wwkuehster/java.log.9257
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.9394
+.MATLAB is selecting SOFTWARE OPENGL rendering.
+...Opening log file:  /home/wwkuehster/java.log.9485
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.9578
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.9669
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.9761
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.9852
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.9942
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10033
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10123
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10214
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10305
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10395
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10487
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10580
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10670
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10761
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10897
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.10989
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11080
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11171
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11263
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11352
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11443
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11533
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11623
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11715
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11806
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11897
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.11988
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12079
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12170
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12261
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12399
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12491
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12583
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12674
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12764
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12854
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.12944
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13035
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13125
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13215
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13306
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13397
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13487
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13578
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13669
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13761
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13905
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.13996
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14086
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14176
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14267
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14359
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14450
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14542
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14633
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14725
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14816
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14906
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.14997
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15088
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15178
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15268
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15404
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15494
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15585
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15688
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15782
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15873
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.15963
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16054
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16144
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16235
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16326
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16417
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16507
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16598
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16689
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16781
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.16872
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17006
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17097
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17189
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17280
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17371
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17461
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17551
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17643
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17734
+ 0 Nonlinear |R| = [32m3.316625e+00[39m
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17825
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.17917
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18008
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18099
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18190
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18281
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18418
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18509
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18600
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18690
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18781
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18871
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.18962
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19053
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19144
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19234
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19325
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19415
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19505
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19596
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19687
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19778
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.19889
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20006
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20096
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20187
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20278
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20368
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20458
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20549
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20639
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20730
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20820
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.20911
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21002
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21093
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21184
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21274
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21412
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21502
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21593
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21683
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Opening log file:  /home/wwkuehster/java.log.21794

@@ -1,2 +1,2 @@
 
-#include"/home/wwkuehster/projects/wyattexamples/src/materials/ExampleMaterial.C"
+#include"/home/wwkuehster/projects/wyattexamples/src/materials/VugMaterial.C"
