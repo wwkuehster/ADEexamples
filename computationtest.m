@@ -1,9 +1,11 @@
 function [u,v]=computationtest(x,y)
+    for i = 1:10
         filename = 'MatlabOutput.txt';
-	u = 2*x;
-        v = 2*y;
-        fid = fopen(filename,'wt');
-        fprintf(fid,"%d %d",u,v);
+        u = 2*i;
+        v = 3*y*x;
+        fid = fopen(filename,'a');
+        fprintf(fid,"%d %d\n",u,v);
+    end
 	exit       
 end
 
